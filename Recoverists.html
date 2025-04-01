@@ -83,18 +83,7 @@
         const audioText = document.getElementById('audioText');
     
         let isPlaying = false; // Initially set to false
-    
-        // Function to start audio playback after user interaction
-        function startAudio() {
-            bgMusic.muted = false; // Unmute the audio
-            bgMusic.play().catch(error => {
-                console.log('Autoplay blocked:', error);
-            });
-            isPlaying = true; // Update state to playing
-            audioIcon.innerHTML = '<i class="fas fa-volume-up"></i>';
-            audioText.innerHTML = 'Tap To Pause Music';
-        }
-    
+        
         // Function to toggle audio play/pause
         function toggleAudio() {
             if (isPlaying) {
@@ -110,12 +99,6 @@
             }
             isPlaying = !isPlaying;
         }
-    
-        // Add click event listener for user interaction to start playback
-        window.addEventListener('click', startAudio);
-    
-        // Add click event listener to toggle audio play/pause
-        audioControl.addEventListener('click', toggleAudio);
     </script>
     
 </body>
